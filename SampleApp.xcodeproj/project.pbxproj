@@ -27,6 +27,10 @@
 		C5C5B33525F2383500355DDB /* TypeCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B33225F2383500355DDB /* TypeCellViewController.swift */; };
 		C5C5B33725F2390200355DDB /* ListTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B33625F2390200355DDB /* ListTypeViewController.swift */; };
 		C5C5B33925F239CC00355DDB /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B33825F239CC00355DDB /* Type.swift */; };
+		C5C5B33B25F26F4B00355DDB /* enumIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B33A25F26F4B00355DDB /* enumIcons.swift */; };
+		C5C5B33D25F26F7A00355DDB /* CreateTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B33C25F26F7A00355DDB /* CreateTypeViewController.swift */; };
+		C5C5B33F25F278E300355DDB /* IconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C5B33E25F278E300355DDB /* IconCell.xib */; };
+		C5C5B34325F2944800355DDB /* IconCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B34225F2944800355DDB /* IconCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		C5C5B33225F2383500355DDB /* TypeCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCellViewController.swift; sourceTree = "<group>"; };
 		C5C5B33625F2390200355DDB /* ListTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTypeViewController.swift; sourceTree = "<group>"; };
 		C5C5B33825F239CC00355DDB /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		C5C5B33A25F26F4B00355DDB /* enumIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enumIcons.swift; sourceTree = "<group>"; };
+		C5C5B33C25F26F7A00355DDB /* CreateTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTypeViewController.swift; sourceTree = "<group>"; };
+		C5C5B33E25F278E300355DDB /* IconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCell.xib; sourceTree = "<group>"; };
+		C5C5B34225F2944800355DDB /* IconCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,8 @@
 				C5C5B33225F2383500355DDB /* TypeCellViewController.swift */,
 				AA36B7A225F16C13007C3F23 /* ViewController.swift */,
 				C5C5B33625F2390200355DDB /* ListTypeViewController.swift */,
+				C5C5B33C25F26F7A00355DDB /* CreateTypeViewController.swift */,
+				C5C5B34225F2944800355DDB /* IconCellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +193,7 @@
 				AA36B7A425F16C13007C3F23 /* Main.storyboard */,
 				C5C5B32525F222D900355DDB /* CheckCell.xib */,
 				C5C5B32C25F2357200355DDB /* TypeCell.xib */,
+				C5C5B33E25F278E300355DDB /* IconCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			children = (
 				C5C5B32825F223EB00355DDB /* Task.swift */,
 				C5C5B33825F239CC00355DDB /* Type.swift */,
+				C5C5B33A25F26F4B00355DDB /* enumIcons.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C5B33F25F278E300355DDB /* IconCell.xib in Resources */,
 				C5C5B32625F222D900355DDB /* CheckCell.xib in Resources */,
 				C5C5B32D25F2357200355DDB /* TypeCell.xib in Resources */,
 				AA36B7AE25F16C15007C3F23 /* LaunchScreen.storyboard in Resources */,
@@ -461,12 +474,15 @@
 			files = (
 				C5C5B33525F2383500355DDB /* TypeCellViewController.swift in Sources */,
 				AA36B7A325F16C13007C3F23 /* ViewController.swift in Sources */,
+				C5C5B33D25F26F7A00355DDB /* CreateTypeViewController.swift in Sources */,
 				C5C5B33325F2383500355DDB /* ListTaskViewController.swift in Sources */,
 				C5C5B33425F2383500355DDB /* TodoCellViewController.swift in Sources */,
 				AA36B7A925F16C13007C3F23 /* SampleApp.xcdatamodeld in Sources */,
+				C5C5B34325F2944800355DDB /* IconCellViewController.swift in Sources */,
 				C5C5B33925F239CC00355DDB /* Type.swift in Sources */,
 				C5C5B33725F2390200355DDB /* ListTypeViewController.swift in Sources */,
 				AA36B79F25F16C13007C3F23 /* AppDelegate.swift in Sources */,
+				C5C5B33B25F26F4B00355DDB /* enumIcons.swift in Sources */,
 				C5C5B32925F223EB00355DDB /* Task.swift in Sources */,
 				AA36B7A125F16C13007C3F23 /* SceneDelegate.swift in Sources */,
 			);

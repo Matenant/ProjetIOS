@@ -19,7 +19,12 @@ class ListTypeViewController: UITableViewController{
     let identifier = "TypeCustom"
     
     override func viewDidLoad() {
-        listType = [Type(Title: "Travail", Tasks: testTask)]
+        
+        //self.toolbarItems?.append(UIBarButtonItem(title: "Ajouter", style: .done, target: nil, action: Selector("Ajout")))
+        
+        listType = [Type(Title: "Travail", Image: "trash", Tasks: testTask),
+                    Type(Title: "Maison", Image: "trash", Tasks: testTask),
+                    Type(Title: "Voiture", Image: "trash", Tasks: testTask)]
         
         tableView.register(UINib(nibName: "TypeCell", bundle: nil), forCellReuseIdentifier: identifier)
 //        AF.request("https://api.punkapi.com/v2/beers").response { response in
@@ -41,6 +46,7 @@ class ListTypeViewController: UITableViewController{
         
     }
     
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,13 +61,11 @@ class ListTypeViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         let cell: TypeCellViewController! = tableView.dequeueReusableCell(withIdentifier: identifier) as? TypeCellViewController
         
         cell.title.text = listType[indexPath.row].Title
         cell.nombre.text = "\(listType[indexPath.row].Nombre) tâche(s)"
-        print("okok")
+        cell.icon = UIImageView(image: UIImage(systemName: listType[indexPath.row].Image))
         return cell
     }
     
@@ -70,7 +74,7 @@ class ListTypeViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 130
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
