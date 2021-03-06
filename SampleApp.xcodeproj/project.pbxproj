@@ -19,6 +19,8 @@
 		AA36B7B925F16C15007C3F23 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36B7B825F16C15007C3F23 /* SampleAppTests.swift */; };
 		AA36B7C425F16C15007C3F23 /* SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36B7C325F16C15007C3F23 /* SampleAppUITests.swift */; };
 		C2D1E84D23339B7324348007 /* Pods_SampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C712294744DBC9C2BDE9A65 /* Pods_SampleAppTests.framework */; };
+		C526EC2425F38374008CBB29 /* structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C526EC2325F38374008CBB29 /* structure.swift */; };
+		C526EC2625F38665008CBB29 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C526EC2525F38665008CBB29 /* CreateTaskViewController.swift */; };
 		C5C5B32625F222D900355DDB /* CheckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C5B32525F222D900355DDB /* CheckCell.xib */; };
 		C5C5B32925F223EB00355DDB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C5B32825F223EB00355DDB /* Task.swift */; };
 		C5C5B32D25F2357200355DDB /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C5B32C25F2357200355DDB /* TypeCell.xib */; };
@@ -75,6 +77,8 @@
 		AB9A8A3225FA4F246446336D /* Pods-SampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleAppTests/Pods-SampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADE3DA8892029EEC8420FFFC /* Pods_SampleApp_SampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleApp_SampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FF60C3B0A41967FDC0D12F /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C526EC2325F38374008CBB29 /* structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structure.swift; sourceTree = "<group>"; };
+		C526EC2525F38665008CBB29 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		C5C5B32525F222D900355DDB /* CheckCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCell.xib; sourceTree = "<group>"; };
 		C5C5B32825F223EB00355DDB /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C5C5B32C25F2357200355DDB /* TypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				C5C5B33625F2390200355DDB /* ListTypeViewController.swift */,
 				C5C5B33C25F26F7A00355DDB /* CreateTypeViewController.swift */,
 				C5C5B34225F2944800355DDB /* IconCellViewController.swift */,
+				C526EC2525F38665008CBB29 /* CreateTaskViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				C5C5B32825F223EB00355DDB /* Task.swift */,
 				C5C5B33825F239CC00355DDB /* Type.swift */,
 				C5C5B33A25F26F4B00355DDB /* enumIcons.swift */,
+				C526EC2325F38374008CBB29 /* structure.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,8 +489,10 @@
 				C5C5B33725F2390200355DDB /* ListTypeViewController.swift in Sources */,
 				AA36B79F25F16C13007C3F23 /* AppDelegate.swift in Sources */,
 				C5C5B33B25F26F4B00355DDB /* enumIcons.swift in Sources */,
+				C526EC2425F38374008CBB29 /* structure.swift in Sources */,
 				C5C5B32925F223EB00355DDB /* Task.swift in Sources */,
 				AA36B7A125F16C13007C3F23 /* SceneDelegate.swift in Sources */,
+				C526EC2625F38665008CBB29 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

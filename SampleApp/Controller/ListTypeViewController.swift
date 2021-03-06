@@ -51,7 +51,7 @@ class ListTypeViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Liste des tâches"
+        return "Liste des catégories"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

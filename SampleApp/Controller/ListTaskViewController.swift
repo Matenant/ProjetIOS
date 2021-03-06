@@ -28,8 +28,6 @@ class ListTaskViewController: UITableViewController{
                 do {
                     if let dataSafe = response.data {
                         let json = try JSON(data: dataSafe)
-                        print(json.arrayValue)
-                        print(json.arrayValue[0]["todos"])
                         for task in json.arrayValue[0]["todos"].arrayValue {
                             self.listTask.append(Task(ID: task["id"].intValue, Name: task["name"].stringValue, Check: task["checked"].boolValue))
                         }
@@ -58,15 +56,26 @@ class ListTaskViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         let cell: TodoCellViewController! = tableView.dequeueReusableCell(withIdentifier: identifier) as? TodoCellViewController
         
+        cell.typeID = typeID
         cell.cellID = listTask[indexPath.row].ID
         cell.name.text = listTask[indexPath.row].Name
         cell.check.setOn(listTask[indexPath.row].Check, animated: true)
         
         return cell
+    }
+    
+    @IBAction func ajoutTache(_ sender: Any) {
+        self.performSegue(withIdentifier: "segueToCreateTask", sender: typeID)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let typeID = sender as? Int
+        
+        if let viewControllerDestination = segue.destination as? CreateTaskViewController {
+            viewControllerDestination.typeID = typeID
+        }
     }
 }
 
