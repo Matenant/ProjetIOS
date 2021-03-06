@@ -9,6 +9,13 @@ import UIKit
 
 class TodoCellViewController: UITableViewCell {
     
+    var cellID: Int!
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var check: UISwitch!
+    
+    
+    @IBAction func changeCheck(_ sender: Any) {
+        
+    }
 }

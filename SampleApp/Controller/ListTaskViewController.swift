@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class ListTaskViewController: UITableViewController{
     
-    var type: Type? = nil
+    var typeID: Int?
     
     var listTask: [Task] = []
     
@@ -19,8 +19,27 @@ class ListTaskViewController: UITableViewController{
     
     override func viewDidLoad() {
         tableView.register(UINib(nibName: "CheckCell", bundle: nil), forCellReuseIdentifier: identifier)
-        listTask = type?.Tasks ?? [Task(Name: "Pas de tâche", Check: false)]
         
+        //listTask = type?.Tasks ?? [Task(Name: "Pas de tâche", Check: false)]
+        if let typeIdSafe = typeID {
+            
+            AF.request("http://51.210.110.120:8000/api/categories/\(typeIdSafe)").response { response in
+                
+                do {
+                    if let dataSafe = response.data {
+                        let json = try JSON(data: dataSafe)
+                        print(json.arrayValue)
+                        print(json.arrayValue[0]["todos"])
+                        for task in json.arrayValue[0]["todos"].arrayValue {
+                            self.listTask.append(Task(ID: task["id"].intValue, Name: task["name"].stringValue, Check: task["checked"].boolValue))
+                        }
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print("err")
+                }
+            }
+        }
         super.viewDidLoad()
         
     }
@@ -41,8 +60,9 @@ class ListTaskViewController: UITableViewController{
         
         
         
-        var cell: TodoCellViewController! = tableView.dequeueReusableCell(withIdentifier: identifier) as? TodoCellViewController
+        let cell: TodoCellViewController! = tableView.dequeueReusableCell(withIdentifier: identifier) as? TodoCellViewController
         
+        cell.cellID = listTask[indexPath.row].ID
         cell.name.text = listTask[indexPath.row].Name
         cell.check.setOn(listTask[indexPath.row].Check, animated: true)
         

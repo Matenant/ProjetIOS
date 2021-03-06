@@ -10,7 +10,6 @@ import UIKit
 class CreateTypeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var tabIcon: UITableView!
     
@@ -44,12 +43,15 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
         return iconData.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: IconCellViewController! = tabIcon.dequeueReusableCell(withIdentifier: identifier) as? IconCellViewController
         
-        cell.icon = UIImageView(image: UIImage(systemName: iconData[indexPath.row]))
-
+        cell.icon.image = UIImage(systemName: iconData[indexPath.row])
         
         return cell
     }
@@ -58,7 +60,5 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
         print(iconData[indexPath.row])
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
+    
 }

@@ -22,7 +22,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="icon" destination="9oZ-5m-ERs" id="y8h-vK-Hsl"/>
+                <outlet property="icon" destination="9oZ-5m-ERs" id="gnp-XB-V9s"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="-110.15625"/>
         </tableViewCell>

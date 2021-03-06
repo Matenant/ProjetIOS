@@ -6,16 +6,13 @@
 //
 
 class Type {
+    let ID: Int
     let Title: String
-    let Nombre: Int
     let Image: String
     
-    let Tasks: [Task]
-    
-    init(Title: String, Image: String, Tasks: [Task]){
+    init(ID: Int, Title: String, Image: String){
+        self.ID = ID
         self.Title = Title
-        self.Nombre = Tasks.count
-        self.Tasks = Tasks
         self.Image = Image
     }
 }
