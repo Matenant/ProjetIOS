@@ -10,3 +10,9 @@ struct structTask: Encodable{
     let checked: Bool
     let categorie_id: Int
 }
+
+struct structType: Encodable{
+    let name: String
+    let icon: String
+    let user_id: Int
+}

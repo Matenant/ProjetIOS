@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class CreateTypeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var icon: String?
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var tabIcon: UITableView!
@@ -32,9 +34,6 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
         tabIcon.dataSource = self
     }
     
-    @IBAction func ajouter(_ sender: Any) {
-    }
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -57,7 +56,22 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(iconData[indexPath.row])
+        icon = iconData[indexPath.row]
+    }
+    
+    @IBAction func ajouter(_ sender: Any) {
+        let user_id: Int = 1
+        if let safeName = name.text, let safeIcon = icon  {
+            let type = structType(name: safeName, icon: safeIcon, user_id: user_id)
+            AF.request("http://51.210.110.120:8000/api/categories", method: .post, parameters: type, encoder: JSONParameterEncoder.default).response { response in
+                switch response.result {
+                case .success:
+                    self.dismiss(animated: true, completion: nil)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+        }
     }
     
     
