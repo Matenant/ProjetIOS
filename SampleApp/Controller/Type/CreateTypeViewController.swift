@@ -9,8 +9,12 @@ import UIKit
 import Alamofire
 
 class CreateTypeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    var userID: Int?
     
     var icon: String?
+    var strName: String?
+    var catID: Int?
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var tabIcon: UITableView!
@@ -19,13 +23,25 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
     
     var iconData: [String] = []
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+    }
+    
     override func viewDidLoad() {
+        
         
         SFSymbol.allCases.forEach {
             iconData.append($0.rawValue)
         }
         
         tabIcon.register(UINib(nibName: "IconCell", bundle: nil), forCellReuseIdentifier: identifier)
+        
+        //self.tableView.selectRow(at: , animated: false, scrollPosition: UITableViewScrollPosition.none)
+        
+        if let safeName = strName {
+            name.text = safeName
+        }
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -60,19 +76,35 @@ class CreateTypeViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func ajouter(_ sender: Any) {
-        let user_id: Int = 1
-        if let safeName = name.text, let safeIcon = icon  {
-            let type = structType(name: safeName, icon: safeIcon, user_id: user_id)
-            AF.request("http://51.210.110.120:8000/api/categories", method: .post, parameters: type, encoder: JSONParameterEncoder.default).response { response in
-                switch response.result {
-                case .success:
-                    self.dismiss(animated: true, completion: nil)
-                case let .failure(error):
-                    print(error)
+        
+        if let safeName = name.text, let safeIcon = icon, let safeUserID = userID  {
+            if let safeCatID = catID {
+                let type = structType(name: safeName, icon: safeIcon, user_id: safeUserID)
+                AF.request("http://51.210.110.120:8000/api/categories/\(safeCatID)", method: .put, parameters: type, encoder: JSONParameterEncoder.default).response { response in
+                    switch response.result {
+                    case .success:
+                        self.dismiss(animated: true, completion: nil)
+                    case let .failure(error):
+                        print(error)
+                    }
                 }
             }
+            else {
+                let type = structType(name: safeName, icon: safeIcon, user_id: safeUserID)
+                AF.request("http://51.210.110.120:8000/api/categories", method: .post, parameters: type, encoder: JSONParameterEncoder.default).response { response in
+                    switch response.result {
+                    case .success:
+                        self.dismiss(animated: true, completion: nil)
+                    case let .failure(error):
+                        print(error)
+                    }
+                }
+            }
+            
         }
+        
+        
     }
     
-    
 }
+

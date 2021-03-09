@@ -11,4 +11,5 @@ class TypeCellViewController: UITableViewCell {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var nombre: UILabel!
+    
 }

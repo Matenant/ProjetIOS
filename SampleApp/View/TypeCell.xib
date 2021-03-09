@@ -35,6 +35,7 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <gestureRecognizers/>
             <connections>
                 <outlet property="icon" destination="pEh-vx-mVY" id="rHT-ZX-VCJ"/>
                 <outlet property="nombre" destination="mee-CC-h1w" id="Sn8-Zc-KjX"/>
