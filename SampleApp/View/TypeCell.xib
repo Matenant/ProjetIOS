@@ -19,15 +19,8 @@
                         <rect key="frame" x="14" y="8" width="116" height="110"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mee-CC-h1w">
-                        <rect key="frame" x="144" y="97" width="136" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Travail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iki-sh-yeg">
-                        <rect key="frame" x="144" y="10" width="382" height="79"/>
+                        <rect key="frame" x="138" y="24" width="382" height="79"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="49"/>
                         <nil key="textColor"/>
@@ -38,7 +31,6 @@
             <gestureRecognizers/>
             <connections>
                 <outlet property="icon" destination="pEh-vx-mVY" id="rHT-ZX-VCJ"/>
-                <outlet property="nombre" destination="mee-CC-h1w" id="Sn8-Zc-KjX"/>
                 <outlet property="title" destination="iki-sh-yeg" id="Fqb-7K-Nvm"/>
             </connections>
             <point key="canvasLocation" x="275.36231884057975" y="91.741071428571431"/>

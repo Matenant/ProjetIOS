@@ -182,6 +182,7 @@
 		C52584FB25F7D0BA00441F7B /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				C5C5B34225F2944800355DDB /* IconCellViewController.swift */,
 				C5C5B33C25F26F7A00355DDB /* CreateTypeViewController.swift */,
 				C5C5B33625F2390200355DDB /* ListTypeViewController.swift */,
 				C5C5B33225F2383500355DDB /* TypeCellViewController.swift */,
@@ -203,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				C52584F925F7634E00441F7B /* CreateUserViewController.swift */,
-				C5C5B34225F2944800355DDB /* IconCellViewController.swift */,
 				AA36B7A225F16C13007C3F23 /* ViewController.swift */,
 			);
 			path = User;

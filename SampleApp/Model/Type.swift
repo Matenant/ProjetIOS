@@ -5,6 +5,7 @@
 //  Created by Matheo Faivre on 05/03/2021.
 //
 
+//class qui décrit une catégorie (un type de tâche)
 class Type {
     let ID: Int
     let Title: String

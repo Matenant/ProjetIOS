@@ -5,6 +5,8 @@
 //  Created by Matheo Faivre on 05/03/2021.
 //
 
+
+//énumération de toutes les icônes pour les affichers dans la table view
 public enum SFSymbol: String, CaseIterable {
     
 

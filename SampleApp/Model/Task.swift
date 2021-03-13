@@ -5,6 +5,7 @@
 //  Created by Matheo Faivre on 05/03/2021.
 //
 
+// Class qui décrit une tâche
 class Task {
     let ID: Int
     let Name: String

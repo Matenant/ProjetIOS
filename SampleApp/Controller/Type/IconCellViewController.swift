@@ -7,6 +7,7 @@
 
 import UIKit
 
+//permet de récupérer l'icone pour la catégorie
 class IconCellViewController: UITableViewCell {
     @IBOutlet weak var icon: UIImageView!
 }
