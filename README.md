@@ -1,4 +1,5 @@
 # ProjetIOS
+Projet réalisé en Swift pour un cours, cela nous a permis de concevoir avec le langage Swift.
 Créé par :
 - Aguilar Naiby
 - Siri Romaric
